@@ -1,0 +1,17 @@
+a = int(input())
+b = int(input())
+c = int(input())
+
+mul = str(a * b * c)
+mul_list = list(mul)
+
+print(mul_list.count('0'))
+print(mul_list.count('1'))
+print(mul_list.count('2'))
+print(mul_list.count('3'))
+print(mul_list.count('4'))
+print(mul_list.count('5'))
+print(mul_list.count('6'))
+print(mul_list.count('7'))
+print(mul_list.count('8'))
+print(mul_list.count('9'))
