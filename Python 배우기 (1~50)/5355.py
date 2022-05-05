@@ -1,10 +1,15 @@
-n = int(input())
-k = 2
+t = int(input())
 
+for i in range(t):
+    word = []
+    word = input().split()
+    num = float(word[0])
 
-while(n != 1):
-    if (n % k == 0):
-        print(k)
-        n /= k
-    else:
-        k += 1
+    for i in range(1,len(word)):
+        if word[i] == '@':
+            num *= 3
+        elif word[i] == '%':
+            num += 5
+        elif word[i] == '#':
+            num -= 7
+    print("{:.2f}".format(num))
