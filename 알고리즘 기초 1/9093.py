@@ -1,66 +1,35 @@
 import sys
 
 class Node:
-    def __init__(self, value = None, pointer = None):
+    def __init__(self,value = None, pointer = None):
         self.value = value
         self.pointer = pointer
-    
+
 class Stack:
     def __init__(self):
-        self.topIt = None
-        self.count = 0
-    
+        self.top = None
+
     def push(self, item):
-        self.topIt = Node(item, self.topIt)
-        self.count += 1
-    
-    def size(self):
-        print(self.count)
-        # return None
-    
-    def isEmpty(self):
-        return (self.count == 0)
-    
-    def top(self):
-        if not self.isEmpty():
-            print(self.topIt.value)
-            # return None
-        else :
-            print(-1)
-            # return None
+        self.top = Node(item, self.top)
 
     def pop(self):
-        if not self.isEmpty():
-            node = self.topIt
-            self.topIt = node.pointer
-            self.count -= 1
-            print(node.value)
-            # return node.value
-        else :
-            print(-1)
-            # return None
-    
-    def empty(self):
-        if not self.isEmpty():
-            print(0)
-        else:
-            print(1)
+        node = self.top
+        self.top = node.pointer
+        print(node.value)
 
-n = int(input())
+    def printStack(self):
+        node = self.top
+        while node:
+            print(node.value, end="")
+            node = node.pointer
 
-stack = Stack()
-
-for i in range(n):
-    word = sys.stdin.readline().split()
-
-    if (word[0] == 'top'):
-        stack.top()
-    elif (word[0] == 'size'):
-        stack.size()
-    elif (word[0] == 'empty'):
-        stack.empty()
-    elif (word[0] == 'pop'):
-        stack.pop()
-    else:
-        stack.push(int(word[1]))
-        
+t = int(input())
+for i in range(t): # test case 만큼 반복함
+    words = list(sys.stdin.readline().split()) # 공백을 구분자로, words 리스트에 저장
+    for j in range(len(words)): # words의 길이 만큼 반복 -> words의 단어(공백으로 구분한)를 각각 뒤집어 출력
+        stack = Stack()
+        for k in range(len(words[j])):
+            stack.push(words[j][k])
+        stack.printStack()
+        print(" ", end="")
+    print()
