@@ -22,6 +22,6 @@
 📦[알고리즘 기초 1](https://code.plus/course/41)  
  ┗ 📂자료구조1  
 📦자료구조(for study)  
-📦[Python 배우기 (1~50)](https://www.acmicpc.net/workbook/view/459) 💯  
+📦[Python 배우기 (1~50)](https://www.acmicpc.net/workbook/view/459) 
 📦[Python 배우기 (51~100)](https://www.acmicpc.net/workbook/view/460)  
 📦[Python 배우기 (101~150)](https://www.acmicpc.net/workbook/view/461)
